@@ -1,0 +1,56 @@
+.Menu{
+    height: 70rem;   
+}
+
+.Menu-logo{
+    height: 63rem;
+    width: 140rem;
+    
+}
+
+.Menu-btn{
+    width: 70rem;
+    height: 70rem;
+}
+
+.Principal-aside{
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Principal-pj{
+    width: 48%;
+    min-height: 320rem;
+}
+
+.Principal-pj span{
+    font-size: var(--md);
+} 
+
+.Principal-division{
+    height: 50rem; 
+}
+
+.Principal-division div{
+    height: 38rem;
+    width: 38rem;
+}
+
+.Principal-image{
+    min-height: 4 00rem;
+    height: calc(100vh * 0.95);
+}
+
+.Principal-info{
+    font-size: var(--md); 
+}
+
+.Footer{
+    height: 60rem;
+}
+
+.Mobile-menu{
+    margin-left: 60vw;
+    width: 40vw;
+}

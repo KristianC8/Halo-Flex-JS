@@ -72,3 +72,7 @@
     margin-left: 60vw;
     width: 40vw;
 }
+
+.Container-login{
+    display: none;
+}

@@ -62,7 +62,7 @@
     color: var(--white);
 } 
 
-.Desktop-div{
+.Desktop-boton{
     height: 50rem;
     width: 50rem;
     margin: 0 0 0 5rem;
@@ -70,6 +70,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    cursor: pointer;
 }
 
 .Principal{
@@ -151,3 +152,81 @@
 .Footer-autor{
     padding: 0 20rem;  
 }
+
+.Container-login {
+    display: block;
+    position: absolute;
+    top: 60rem;
+    right: 0;
+    width: 300rem;
+    padding: 40rem;
+    z-index: 1;
+    background: rgba(0,0,0,.9);
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 12rem 20rem, rgba(0, 0, 0, 0.5) 0px 8rem 8rem;
+    border-radius: 0 0 10rem 10rem;
+    font-size: var(--md);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: .5s ease all;
+  }
+
+  .loginActive{
+    clip-path: polygon(0 0, 100% 0, 100% 110%, 0% 110%);
+}
+
+  .Login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Login-box {
+    width: 100%;
+    position: relative;
+    font-size: 14rem;
+    font-weight: 500;
+  }
+
+  .Login-submit {
+    display: block;
+    width: 100rem;
+    margin: 10rem 0;
+    padding: 10rem 10rem;
+    color: var(--white);
+    font-weight: 500;
+    text-decoration: none;
+    transition: .5s;
+    letter-spacing: 3rem;
+    background-color: var(--ligth-grey);
+    text-align: center;
+  }
+  
+  .Login-box input{
+    width: 100%;
+    padding: 10rem 0;
+    color: var(--white);
+    margin-bottom: 30rem;
+    border: none;
+    border-bottom: 1rem solid var(--white);
+    outline: none;
+    background: transparent;
+  }
+
+  .Login-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10rem 0;
+    color: var(--white);
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  .Login-box input:focus ~ label,
+  .Login-box input:valid ~ label {
+    top: -20rem;
+    left: 0;
+    color: var(--ligth-grey);
+    font-size: var(--sm);
+    font-weight: 700;
+  }

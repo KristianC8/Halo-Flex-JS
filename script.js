@@ -7,6 +7,8 @@ const MobileMenu = document.querySelector(".Container-mobile")
 const closeMenuMob = document.querySelector(".Mobile-close")
 const Cortana = document.querySelector(".Principal-cortana")
 const BotonScroll = document.querySelector(".Button-scroll")
+const BotonLogin = document.querySelector(".Desktop-boton")
+const LoginMenu = document.querySelector(".Container-login")
 
 const characterList = []
 characterList.push({
@@ -41,7 +43,13 @@ Characters.forEach((eachImg,index) => {
 BtnMenu.addEventListener("click",menuMobile)
 closeMenuMob.addEventListener("click",closeMenu)
 BotonScroll.addEventListener("click", scrollTop)
+BotonLogin.addEventListener("click",openLogin)
 window.addEventListener("scroll", isTop)
+
+
+function openLogin(){
+    LoginMenu.classList.toggle("loginActive")
+}
 
 function isTop() {
     if (window.scrollY <= 800){

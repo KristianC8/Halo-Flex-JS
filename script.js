@@ -1,48 +1,71 @@
-const Pj1 =  document.querySelector(".Principal-pj--1")
-const Pj2 =  document.querySelector(".Principal-pj--2")
-const Pj3 =  document.querySelector(".Principal-pj--3")
-const Pj4 =  document.querySelector(".Principal-pj--4")
+const Characters = document.querySelectorAll(".Principal-aside div")
+
 const PrincipalImage = document.querySelector(".Principal-Img")
 const PrincipalInfo = document.querySelector("#principalInfo")
 const BtnMenu = document.querySelector(".Menu-btn")
 const MobileMenu = document.querySelector(".Container-mobile")
 const closeMenuMob = document.querySelector(".Mobile-close")
+const Cortana = document.querySelector(".Principal-cortana")
+const BotonScroll = document.querySelector(".Button-scroll")
 
+const characterList = []
+characterList.push({
+    image : 'https://i.postimg.cc/3NPZ8tvH/Master-chief-2-lg.jpg',
+    text : "El Suboficial Jefe Maestro John-117, es un SPARTAN-II de la Armada del UNSC"
+})
+characterList.push({
+    image : 'https://i.postimg.cc/bvTLx0KQ/Spartan-2-lg.jpg',
+    text : "Miembros provenientes del proyecto Spartan en el que se trataba de crear soldados mucho más adaptados y resistentes que cualquier marine de la UNSC"
+})
+characterList.push({
+    image : 'https://i.postimg.cc/50K3G49y/Covenant-2-lg.jpg',
+    text : "Es una raza militar extraterrestre que alguna vez dirigió el ejército Covenant"
+})
+characterList.push({
+    image : 'https://i.postimg.cc/X7nZLZZV/Brute-2-md.jpg',
+    text : "Es una especie agresiva de mamíferos bípedos que se unió al Covenant poco antes de la guerra contra la humanidad."
+})
 
-Pj1.addEventListener("click",imagenP1)
-Pj2.addEventListener("click",imagenP2)
-Pj3.addEventListener("click",imagenP3)
-Pj4.addEventListener("click",imagenP4)
+Characters.forEach((eachImg,index) => {
+  
+    Characters[index].addEventListener("click",()=>{
+        PrincipalImage.setAttribute('src',characterList[index].image)
+        PrincipalInfo.textContent = characterList[index].text  
+        borderGrey(Characters)
+        Characters[index].style.border = "1.8rem solid var(--white)";
+        Cortana.style.opacity = "0.2"  
+    })
+
+})
 
 BtnMenu.addEventListener("click",menuMobile)
 closeMenuMob.addEventListener("click",closeMenu)
+BotonScroll.addEventListener("click", scrollTop)
+window.addEventListener("scroll", isTop)
 
+function isTop() {
+    if (window.scrollY <= 800){
+      BotonScroll.style.display = "none";
+       }
+       else{
+      BotonScroll.style.display = "block";
+    }
+  }
 
-function imagenP1(){
-    PrincipalImage.setAttribute('src','https://i.postimg.cc/3NPZ8tvH/Master-chief-2-lg.jpg')
-    PrincipalInfo.textContent = "El Suboficial Jefe Maestro John-117, es un SPARTAN-II de la Armada del UNSC"
-}
-
-function imagenP2(){
-    PrincipalImage.setAttribute('src','https://i.postimg.cc/bvTLx0KQ/Spartan-2-lg.jpg')
-    PrincipalInfo.textContent = " Miembros provenientes del proyecto Spartan en el que se trataba de crear soldados mucho más adaptados y resistentes que cualquier marine de la UNSC"
-    
-}
-
-function imagenP3(){
-    PrincipalImage.setAttribute('src','https://i.postimg.cc/50K3G49y/Covenant-2-lg.jpg')
-    PrincipalInfo.textContent = "Es una raza militar extraterrestre que alguna vez dirigió el ejército Covenant"
-}
-
-function imagenP4(){
-    PrincipalImage.setAttribute('src','https://i.postimg.cc/SsxdD2hH/Brute-2-lg.jpg')
-    PrincipalInfo.textContent = "Es una especie agresiva de mamíferos bípedos que se unió al Covenant poco antes de la guerra contra la humanidad."
-}
-
+function scrollTop() {
+    window.scrollTo(0, 0);
+  }
+  
 function menuMobile(){
-    MobileMenu.classList.add("active")
+    MobileMenu.classList.add("menuActive")
 }
 
 function closeMenu(){
-    MobileMenu.classList.remove("active")
+    MobileMenu.classList.remove("menuActive")
+}
+
+function borderGrey (array){
+    for(let ch of array) {
+        ch.style.border= "1rem solid var(--grey)"; 
+    }
 }

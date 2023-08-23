@@ -2,6 +2,10 @@
     display: none;
 }
 
+.Button-scroll{
+    display: none;
+}
+
 .Menu{
     width: 100vw; 
     height: 55rem;
@@ -125,9 +129,18 @@
 }
 
 .Principal-info{
+    min-height: 80rem;
     width: 95%;
     height: calc((100vh - 140rem) * 0.17);
     font-size: var(--md); 
+}
+
+.Principal-cortana{
+    background-image: url("../Images/Contana\ -sm.png");
+    left: auto;
+    right: -1%;
+    height: 25vh;
+    right: 0.2%;
 }
 
 .Footer{

@@ -28,12 +28,29 @@ html{
     position: fixed;
     top: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     transition: .5s ease all;
 }
 
-.active{
+.Button-scroll{
+    display: none;
+    position: fixed;
+    bottom: 28vh;
+    right: 7.5rem;
+    height: 45rem;
+    width: 45rem;
+    z-index: 1;
+    border-radius: 10%;
+    border-style: none;
+    background-color: var(--ligth-grey);
+    opacity: 0.9;
+    background-image: url("../Images/Flecha\ arriba.png");
+    background-position: center;
+    background-size: contain;
+}
+
+.menuActive{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -41,7 +58,6 @@ html{
     margin-left: 40vw;
     width: 60vw;
     height: 100vh;
-    padding: 5rem 10rem 10rem;
     font-size: var(--lg);
     font-weight: bold;
     background-color: var(--black);  
@@ -49,14 +65,14 @@ html{
 }
 
 .Mobile-close{
-    width: 50rem;
-    height: 50rem;
+    width: 60rem;
+    height: 60rem;
     border-style: none;
     background-image: url("../Images/Heroico\ close.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-color: var(--black);
+    background-color: var(--ligth-grey);
 }
 
 .Mobile-li{
@@ -186,16 +202,16 @@ html{
     width: 92%;
     height: auto;
     margin: 20rem 0;
+    position: relative;
 }
 
 .Principal-image{
     width: 100%;
-    height: calc(100vh * 0.75);
+    height: 75vh;
     margin: 0 0 20rem 0;
     border-radius: 7rem;
     border: solid 3rem;
     border-color: var(--dark-grey);
-
 }
 
 .Principal-image img{
@@ -203,6 +219,10 @@ html{
     height: 100%;
     width: 100%;
     border-radius: 5rem;
+    background-image: url("https://i.postimg.cc/zfjhLjLW/Fondo-unsc-md.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .Principal-info{
@@ -211,7 +231,7 @@ html{
     justify-content: center;
     text-align: justify;
     width: 100%;
-    height: calc(100vh * 0.18);
+    height: 18vh;
     padding: 20rem;
     background-color: var(--dark-grey);
     color: var(--white);
@@ -221,6 +241,18 @@ html{
     border: solid 3rem;
     border-color: var(--white);
     opacity: 0.5;
+}
+
+.Principal-cortana{
+    position: absolute;
+    bottom:0;
+    left: -1%;
+    height: 19vh;
+    width: calc(19vh * 0.256);
+    background-image: url("../Images/Cortana2\ -sm.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .Footer{

@@ -88,7 +88,7 @@
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: unset;
-    background-color: var(--ligth-grey);
+    background-color: var(--dark-grey);
 }
 
 .Principal-pj{
@@ -126,12 +126,11 @@
     width: 97%;
     min-height: 4 00rem;
     height: calc((100vh - 140rem) * 0.84);
-    margin: 0 0 10rem 0;
 }
 
 .Principal-info{
     min-height: 80rem;
-    width: 95%;
+    width: 97%;
     height: calc((100vh - 140rem) * 0.17);
     font-size: var(--md); 
 }

@@ -52,7 +52,7 @@ function openLogin(){
 }
 
 function isTop() {
-    if (window.scrollY <= 800){
+    if (window.scrollY <= 400){
       BotonScroll.style.display = "none";
        }
        else{

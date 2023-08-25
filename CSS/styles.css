@@ -36,10 +36,10 @@ html{
 .Button-scroll{
     display: none;
     position: fixed;
-    bottom: 28vh;
+    bottom: 8vh;
     right: 7.5rem;
-    height: 45rem;
-    width: 45rem;
+    height: 35rem;
+    width: 35rem;
     z-index: 1;
     border-radius: 10%;
     border-style: none;
@@ -226,7 +226,7 @@ html{
     text-align: justify;
     width: 100%;
     height: 18vh;
-    padding: 20rem;
+    padding: 20rem 40rem;
     color: var(--white);
     font-size: var(--sm);
     font-weight: 500;
